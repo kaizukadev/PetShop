@@ -34,7 +34,7 @@ public class ClienteUI {
     private void cadastrarCliente() {
         String rg = Console.scanString("\nRG......: ");
         if (RepositorioClientes.getInstance().clienteExiste(rg)) {
-            System.out.println(">> RG já existente no cadastro!");
+            System.err.println(">> RG já existente no cadastro!");
         } else {
             String nome = Console.scanString("Nome....: ");
             String telefone = Console.scanString("Telefone: ");
